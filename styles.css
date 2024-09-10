@@ -10,7 +10,20 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
+/* Add this CSS class to make the navigation link stand out */
+.highlighted-link {
+    font-weight: bold;
+    color: #FFD700; /* Gold color */
+    background-color: #333; /* Dark background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+.highlighted-link:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+    color: #FFF; /* White color on hover */
+}
 header {
     background-image: url("images/img.png");
     color: white;
