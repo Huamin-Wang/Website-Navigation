@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-image: url("images/img.png");
     color: white;
     padding: 20px;
     text-align: center;
@@ -215,4 +215,10 @@ footer {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/*<!--开场视屏-->*/
+#introVideo {
+    border: 5px solid #4CAF50;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }

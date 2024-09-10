@@ -18,11 +18,11 @@ function showSlides() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("img01");
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImage");
     var captionText = document.getElementById("caption");
 
-    document.querySelectorAll('.gallery-grid img').forEach(function(img) {
+    document.querySelectorAll('.tools-grid img').forEach(function(img) {
         img.onclick = function() {
             modal.style.display = "block";
             modalImg.src = this.src;
@@ -33,5 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
     var span = document.getElementsByClassName("close")[0];
     span.onclick = function() {
         modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
 });
