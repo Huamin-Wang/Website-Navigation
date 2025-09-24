@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>22软件校企合作-游戏设计课程展示</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <!-- 标题部分 -->
     <header>
         <h1 style="color: black">22软件校企合作-游戏设计课程展示</h1>
-
     </header>
 
     <!-- 导航栏 -->
     <nav>
         <ul>
-            <li><a href="#games" class="highlighted-link">游戏试玩</a></li>
+	<li><a href="#games" class="highlighted-link">游戏试玩</a></li>
             <li><a href="#gallery">图片展示</a></li>
             <li><a href="#videos">上课片断展示</a></li>
             <li><a href="#contact">联系我们</a></li>
@@ -27,7 +26,7 @@
     <section id="introVideoSection">
         <h2>集锦</h2>
         <video id="introVideo" controls autoplay muted style="width: 100%; height: auto; max-height: 500px; margin-bottom: 20px;">
-            <source src="videos/游戏设计课堂集锦.mp4" type="video/mp4">
+            <source src="{{ url_for('static', filename='videos/游戏设计课堂集锦.mp4') }}" type="video/mp4">
             您的浏览器不支持视频播放。
         </video>
     </section>
@@ -37,25 +36,26 @@
         <h2>学生部分游戏作品试玩</h2>
         <ul>
             <li>
-                <a href="http://47.97.244.52/stu/cst_001/" target="_blank">
-                    <img src="images/game1.png" alt="游戏1" style="width:200px;height:200px;">
+                <a href="http://129.204.44.13/stu/work1/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/Obstacle.png') }}" alt="游戏1" style="width:200px;height:200px;">
+                </a>
+            </li>
+ <li>
+                <a href="http://129.204.44.13/stu/work2/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/shejian.png') }}" alt="游戏2" style="width:200px;height:200px;">
                 </a>
             </li>
             <li>
-                <a href="http://47.97.244.52/stu/cst_002/" target="_blank">
-                    <img src="images/game2.png" alt="游戏2" style="width:200px;height:200px;">
+                <a href="http://129.204.44.13/stu/work3/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/quan.png') }}" alt="游戏3" style="width:200px;height:200px;">
                 </a>
             </li>
             <li>
-                <a href="http://47.97.244.52/stu/swe_001/" target="_blank">
-                    <img src="images/game3.png" alt="游戏3" style="width:200px;height:200px;">
+                <a href="http://129.204.44.13/stu/work4/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/jizhan.png') }}" alt="游戏4" style="width:200px;height:200px;">
                 </a>
             </li>
-            <li>
-                <a href="http://47.97.244.52/stu/swe_002/" target="_blank">
-                    <img src="images/game4.png" alt="游戏4" style="width:200px;height:200px;">
-                </a>
-            </li>
+           
         </ul>
     </section>
 
@@ -63,9 +63,9 @@
     <section id="gallery">
         <h2>图片展示</h2>
         <div class="gallery-grid">
-            <img src="images/学生听课照片.jpg" alt="学生听课照片">
-            <img src="images/小组讨论图片.jpg" alt="小组讨论图片">
-            <img src="images/教师上课.jpg" alt="教师上课">
+            <img src="{{ url_for('static', filename='images/学生听课照片.jpg') }}" alt="学生听课照片">
+            <img src="{{ url_for('static', filename='images/小组讨论图片.jpg') }}" alt="小组讨论图片">
+            <img src="{{ url_for('static', filename='images/教师上课.jpg') }}" alt="教师上课">
         </div>
     </section>
 
@@ -74,39 +74,39 @@
         <h2>上课片断视频</h2>
         <div class="video-grid">
             <video controls>
-                <source src="videos/hero答辩演示场景.mp4" type="video/mp4">
+                <source src="{{ url_for('static', filename='videos/hero答辩演示场景.mp4') }}" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
             <video controls>
-                <source src="videos/obstacle_Escaping答辩场景.mp4" type="video/mp4">
+                <source src="{{ url_for('static', filename='videos/obstacle_Escaping答辩场景.mp4') }}" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
             <video controls>
-                <source src="videos/学生听课视频.mp4" type="video/mp4">
+                <source src="{{ url_for('static', filename='videos/学生听课视频.mp4') }}" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
             <video controls>
-                <source src="videos/小组讨论视频.mp4" type="video/mp4">
+                <source src="{{ url_for('static', filename='videos/小组讨论视频.mp4') }}" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
             <video controls>
-                <source src="videos/教师上课视频.mp4" type="video/mp4">
+                <source src="{{ url_for('static', filename='videos/教师上课视频.mp4') }}" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
             <video controls>
-                <source src="videos/跳跳蛙答辩场景.mp4" type="video/mp4">
+                <source src="{{ url_for('static', filename='videos/跳跳蛙答辩场景.mp4') }}" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
             <video controls>
-                <source src="videos/雷电大战僵尸王答辩演示场景.mp4" type="video/mp4">
+                <source src="{{ url_for('static', filename='videos/雷电大战僵尸王答辩演示场景.mp4') }}" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
             <video controls>
-                <source src="videos/飞机大战答辩场景.mp4" type="video/mp4">
+                <source src="{{ url_for('static', filename='videos/飞机大战答辩场景.mp4') }}" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
             <video controls>
-                <source src="videos/黄金矿工游戏演示场景.mp4" type="video/mp4">
+                <source src="{{ url_for('static', filename='videos/黄金矿工游戏演示场景.mp4') }}" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
         </div>
@@ -126,12 +126,12 @@
         <p>&copy; 2024 课堂展示. 保留所有权利。</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 
     <!-- 图片放大 -->
-    <div id="myModal" class="modal">
+    <div id="imageModal" class="modal">
         <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
+        <img class="modal-content" id="modalImage">
         <div id="caption"></div>
     </div>
 </body>
